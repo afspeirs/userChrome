@@ -7,11 +7,12 @@
 	#navigator-toolbox > toolbar:not(#TabsToolbar):not(#toolbar-menubar),
 	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) { background-color: inherit !important; }
 	/* Move menu to the right */
-	#PanelUI-button { position: fixed;top: 10px;right: 140px; }
+	#PanelUI-button { position: fixed;top: 10px;right: 140px;border-inline-start: inherit !important; }
 }
 
 /* Remove unnecassary whitespace before the tabs */
 .titlebar-placeholder[type="pre-tabs"] { border-inline-end: 1px solid black !important;width: 1px !important; }
+/* .titlebar-placeholder[type="post-tabs"] { display: none !important; } */
 
 /* Remove the action button in the URL bar */
 #pageActionButton { display: none !important; }
