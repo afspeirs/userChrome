@@ -11,6 +11,23 @@
 	#main-window[sizemode="normal"] #PanelUI-button { top: 6px; }
 }
 
+/* Prevent tab overflow */
+/* .tabbrowser-tab { min-width: 1em !important;clip-width: 1em !important; } */
+
+/* Only show close buttons on hover */
+.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button { display: none !important; }
+.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button { display: -moz-box !important; }
+
+/* Hides bookmark text for all bookmarks displayed in a toolbar */
+.bookmark-item > .toolbarbutton-text { display: none !important; }
+.bookmark-item > .toolbarbutton-icon { margin-inline-end: 0px !important; }
+
+
+/* Tabs on the bottom */
+/* #TabsToolbar { -moz-box-ordinal-group: 2; } */
+/* #nav-bar { border-top-width: 0px !important; } */
+/* Bookmarks Bar fix */
+/* #PersonalToolbar { -moz-box-ordinal-group: 2; } */
 
 /* Remove unnecassary whitespace before the tabs */
 .titlebar-placeholder[type="pre-tabs"] { border-inline-end: 1px solid black !important;width: 1px !important; }
@@ -18,16 +35,22 @@
 
 /* Remove the action button in the URL bar */
 #pageActionButton { display: none !important; }
+
 /* Remove the i button in the URL bar */
-/* #identity-icon { display: none !important; } */
+#identity-icon { display: none !important; }
+#connection-icon { margin-inline-start: 0px !important; }
+#identity-box { padding-inline-start: 6px !important; }
+#identity-box { padding-inline-end: 6px !important; }
+
 /* Remove the identity box from the URL bar */
-#identity-box { max-width: 0 !important; }
+/* #identity-box { max-width: 0 !important; } */
+
 /* Remove the placeholder text from the URL bar */
-*|*.textbox-input::-moz-placeholder { opacity: 0 !important; }
+/* *|*.textbox-input::-moz-placeholder { opacity: 0 !important; } */
 
 /* Autohide Back/Forward Buttons when there is nothing to go Back/Forward to */
 /* #back-button[disabled="true"] { display: none; } */
-#forward-button[disabled="true"] { display: none; }
+/* #forward-button[disabled="true"] { display: none; } */
 
 
 /* Colour URL bar */
