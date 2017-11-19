@@ -8,9 +8,7 @@
 	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) { background-color: inherit !important; }
 	/* Move menu to the right */
 	#PanelUI-button { position: fixed;top: 10px;right: 140px;border-inline-start: inherit !important; }
-	#main-window[sizemode="normal"] #PanelUI-button {
-		position: fixed;top: 4px;right: 140px;border-inline-start: inherit !important;
-	}
+	#main-window[sizemode="normal"] #PanelUI-button { top: 4px; }
 }
 
 
