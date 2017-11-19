@@ -10,6 +10,8 @@
 	#PanelUI-button { position: fixed;top: 10px;right: 140px; }
 }
 
+/* Remove unnecassary whitespace before the tabs */
+.titlebar-placeholder[type="pre-tabs"] { border-inline-end: 1px solid black !important;width: 1px !important; }
 
 /* Remove the action button in the URL bar */
 #pageActionButton { display: none !important; }
