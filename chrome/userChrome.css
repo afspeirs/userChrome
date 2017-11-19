@@ -23,10 +23,9 @@
 /* Remove the placeholder text from the URL bar */
 *|*.textbox-input::-moz-placeholder { opacity: 0 !important; }
 
-/* Autohide Back/Forward Buttons and Dropdown Marker when there is nothing to go Back/Forward to */
+/* Autohide Back/Forward Buttons when there is nothing to go Back/Forward to */
 /* #back-button[disabled="true"] { display: none; } */
-/* #forward-button[disabled="true"] { display: none; } */
-/* #back-forward-dropmarker[disabled="true"] { display: none; } */
+#forward-button[disabled="true"] { display: none; }
 
 
 /* Colour URL bar */
