@@ -8,7 +8,11 @@
 	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) { background-color: inherit !important; }
 	/* Move menu to the right */
 	#PanelUI-button { position: fixed;top: 10px;right: 140px;border-inline-start: inherit !important; }
+	#main-window[sizemode="normal"] #PanelUI-button {
+		position: fixed;top: 4px;right: 140px;border-inline-start: inherit !important;
+	}
 }
+
 
 /* Remove unnecassary whitespace before the tabs */
 .titlebar-placeholder[type="pre-tabs"] { border-inline-end: 1px solid black !important;width: 1px !important; }
