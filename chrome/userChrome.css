@@ -1,11 +1,14 @@
-/* One line bar */
-#TabsToolbar,#nav-bar { height: 36px !important; }
-#TabsToolbar { margin-left: 35vw !important;margin-right: 44px; }
-/* #TabsToolbar,#tabbrowser-tabs { background-color: rgb(50, 50, 52) !important } */
-#TabsToolbar,#tabbrowser-tabs { background-color: rgb(245, 246, 247) !important }
-#nav-bar { margin-top: -36px !important;margin-right: 65vw !important; }
-/* Move menu to the right */
-#PanelUI-button { position: fixed;top: 10px;right: 144px; }
+@media all and (min-width: 1360px) {
+	/* One line bar */
+	#TabsToolbar,#nav-bar { height: 36px !important; }
+	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px; }
+	#nav-bar { margin-top: -36px !important;margin-right: 65vw !important; }
+	/* Remove colour */
+	#navigator-toolbox > toolbar:not(#TabsToolbar):not(#toolbar-menubar),
+	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) { background-color: inherit !important; }
+	/* Move menu to the right */
+	#PanelUI-button { position: fixed;top: 10px;right: 140px; }
+}
 
 
 /* Remove the action button in the URL bar */
