@@ -1,3 +1,13 @@
+/* One line bar */
+#TabsToolbar,#nav-bar { height: 36px !important; }
+#TabsToolbar { margin-left: 35vw !important;margin-right: 44px; }
+/* #TabsToolbar,#tabbrowser-tabs { background-color: rgb(50, 50, 52) !important } */
+#TabsToolbar,#tabbrowser-tabs { background-color: rgb(245, 246, 247) !important }
+#nav-bar { margin-top: -36px !important;margin-right: 65vw !important; }
+/* Move menu to the right */
+#PanelUI-button { position: fixed;top: 10px;right: 144px; }
+
+
 /* Colour URL bar */
 #urlbar { position: relative;z-index: 1; }
 #identity-box:after { content: '';position: absolute;height: 100%;width: 100%;top: 0;left: 0;pointer-events: none;z-index: -1;background: white;opacity: 0.2; }
