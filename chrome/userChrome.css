@@ -8,6 +8,16 @@
 #PanelUI-button { position: fixed;top: 10px;right: 144px; }
 
 
+/* Remove the action button in the URL bar */
+#pageActionButton { display: none !important; }
+/* Remove the i button in the URL bar */
+/* #identity-icon { display: none !important; } */
+/* Remove the identity box from the URL bar */
+#identity-box { max-width: 0 !important; }
+/* Remove the placeholder text from the URL bar */
+*|*.textbox-input::-moz-placeholder { opacity: 0 !important; }
+
+
 /* Colour URL bar */
 #urlbar { position: relative;z-index: 1; }
 #identity-box:after { content: '';position: absolute;height: 100%;width: 100%;top: 0;left: 0;pointer-events: none;z-index: -1;background: white;opacity: 0.2; }
