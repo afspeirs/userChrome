@@ -1,4 +1,4 @@
-@media all and (min-width: 1360px) {
+@media all and (min-width: 1600px) {
 	/* One line bar */
 	#TabsToolbar,#nav-bar { height: 36px !important; }
 	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px; }
@@ -37,10 +37,8 @@
 #pageActionButton { display: none !important; }
 
 /* Remove the i button in the URL bar */
-#identity-icon { display: none !important; }
-#connection-icon { margin-inline-start: 0px !important; }
-#identity-box { padding-inline-start: 6px !important; }
-#identity-box { padding-inline-end: 6px !important; }
+#identity-icon { margin-inline-start: -4px !important; }
+#connection-icon { display: none !important; }
 
 /* Remove the identity box from the URL bar */
 /* #identity-box { max-width: 0 !important; } */
@@ -51,7 +49,24 @@
 /* Autohide Back/Forward Buttons when there is nothing to go Back/Forward to */
 /* #back-button[disabled="true"] { display: none; } */
 /* #forward-button[disabled="true"] { display: none; } */
+ 
+/* #main-window {
+	--UI-colour: #0f97c4;
+}
+#nav-bar, .tab-background[selected="true"] {
+	background: var(--UI-colour) !important;
+	border: var(--UI-colour) !important;
+}
+.tab-background[selected="true"] {
+	border-bottom: none !important;
+} */
 
+/* #personal-bookmarks .bookmark-item > .toolbarbutton-icon {
+	height: 27px !important;
+	width: 27px !important;
+	border: 3px solid transparent !important;
+	border-radius: 3px !important;
+} */
 
 /* Colour URL bar */
 #urlbar { position: relative;z-index: 1; }
