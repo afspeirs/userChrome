@@ -1,72 +1,66 @@
-@media all and (min-width: 1600px) {
+#navigator-toolbox {
+/* :root { */
+	/* Set background colour */
+	--chrome-secondary-background-color: #0f97c4 !important;
+	/* Hide tab borders */
+	--tabs-border: transparent !important;
+}
+
+/* Hide separators between background tabs */
+.tabbrowser-tab::before,.tabbrowser-tab::after { opacity: 0 !important; }
+/* Remove border under navbar */
+#navigator-toolbox::after { border-bottom: 0px !important; }
+/* tab line - adjust color & size */
+.tab-line { height: 0px !important; }
+
+@media all and (min-width: 1200px) {
 	/* One line bar */
 	#TabsToolbar,#nav-bar { height: 36px !important; }
-	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px; }
+	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px;margin-bottom: 0 !important; }
 	#nav-bar { margin-top: -36px !important;margin-right: 65vw !important; }
 	/* Remove colour */
-	#navigator-toolbox > toolbar:not(#TabsToolbar):not(#toolbar-menubar),
-	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar) { background-color: inherit !important; }
+	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#PersonalToolbar) { background-color: inherit !important; }
 	/* Move menu to the right */
-	#PanelUI-button { position: fixed;top: 12px;right: 140px;border-inline-start: inherit !important; }
-	#main-window[sizemode="normal"] #PanelUI-button { top: 6px; }
+	/* #PanelUI-button { position: fixed;top: 12px;right: 140px;border-inline-start: inherit !important; } */
+	/* Fix padding of bookmarks */
+	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),toolbarbutton.bookmark-item:not(.subviewbutton) { padding: 4px !important; }
 }
+
+/*Menu to the left side*/
+#PanelUI-button { -moz-box-ordinal-group: 0 !important;margin-right: -6px !important; }
+#customization-panelWrapper .panel-arrow { display: none; }
+
+/* Change the colour of the selected tab to the variable */
+.tab-background[selected="true"] { background: var(--chrome-secondary-background-color) !important; }
 
 /* Prevent tab overflow */
 /* .tabbrowser-tab { min-width: 1em !important;clip-width: 1em !important; } */
 
-/* Only show close buttons on hover */
+/* Hide close buttons */
 .tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button { display: none !important; }
+/* Show close buttons on hover */
 .tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button { display: -moz-box !important; }
 
 /* Hides bookmark text for all bookmarks displayed in a toolbar */
 .bookmark-item > .toolbarbutton-text { display: none !important; }
 .bookmark-item > .toolbarbutton-icon { margin-inline-end: 0px !important; }
 
-
-/* Tabs on the bottom */
-/* #TabsToolbar { -moz-box-ordinal-group: 2; } */
-/* #nav-bar { border-top-width: 0px !important; } */
-/* Bookmarks Bar fix */
-/* #PersonalToolbar { -moz-box-ordinal-group: 2; } */
-
 /* Remove unnecassary whitespace before the tabs */
 .titlebar-placeholder[type="pre-tabs"] { border-inline-end: 1px solid black !important;width: 1px !important; }
-/* .titlebar-placeholder[type="post-tabs"] { display: none !important; } */
+.titlebar-placeholder[type="post-tabs"] { display: none !important; }
 
 /* Remove the action button in the URL bar */
 #pageActionButton { display: none !important; }
-
 /* Remove the i button in the URL bar */
 #identity-icon { margin-inline-start: -4px !important; }
 #connection-icon { display: none !important; }
-
 /* Remove the identity box from the URL bar */
 /* #identity-box { max-width: 0 !important; } */
-
-/* Remove the placeholder text from the URL bar */
-/* *|*.textbox-input::-moz-placeholder { opacity: 0 !important; } */
 
 /* Autohide Back/Forward Buttons when there is nothing to go Back/Forward to */
 /* #back-button[disabled="true"] { display: none; } */
 /* #forward-button[disabled="true"] { display: none; } */
- 
-/* #main-window {
-	--UI-colour: #0f97c4;
-}
-#nav-bar, .tab-background[selected="true"] {
-	background: var(--UI-colour) !important;
-	border: var(--UI-colour) !important;
-}
-.tab-background[selected="true"] {
-	border-bottom: none !important;
-} */
 
-/* #personal-bookmarks .bookmark-item > .toolbarbutton-icon {
-	height: 27px !important;
-	width: 27px !important;
-	border: 3px solid transparent !important;
-	border-radius: 3px !important;
-} */
 
 /* Colour URL bar */
 #urlbar { position: relative;z-index: 1; }
