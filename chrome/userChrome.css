@@ -1,30 +1,29 @@
-#navigator-toolbox {
-/* :root { */
+/* #navigator-toolbox { */
+:root:not([customizing]) {
 	/* Set background colour */
-	--chrome-secondary-background-color: #0f97c4 !important;
+	/* --chrome-secondary-background-color: SteelBlue !important; */
 	/* Hide tab borders */
 	--tabs-border: transparent !important;
 }
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1500px) {
 	/* One line bar */
-	#TabsToolbar,#nav-bar { height: 36px !important; }
-	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px;margin-bottom: 0 !important; }
-	#nav-bar { margin-top: -36px !important;margin-right: 65vw !important; }
+	#TabsToolbar,#nav-bar { height: 34px !important;margin-bottom: 0 !important; }
+	#nav-bar { border-top: none !important; }
+	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px; }
+	#nav-bar { margin-top: -34px !important;margin-right: 65vw !important; }
 	/* Remove colour */
-	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#PersonalToolbar) { background-color: inherit !important; }
+	/* #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#PersonalToolbar) { background-color: inherit !important; } */
 	/* Move menu to the right */
 	/* #PanelUI-button { position: fixed;top: 12px;right: 140px;border-inline-start: inherit !important; } */
 	/* Fix padding of bookmarks */
-	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),toolbarbutton.bookmark-item:not(.subviewbutton) { padding: 4px !important; }
+	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),toolbarbutton.bookmark-item:not(.subviewbutton) { padding: 3px !important; }
 }
 
 /*Menu to the left side*/
 #PanelUI-button { -moz-box-ordinal-group: 0 !important;margin-right: -6px !important; }
 #customization-panelWrapper .panel-arrow { display: none; }
 
-/* Change the colour of the selected tab to the variable */
-.tab-background[selected="true"] { background: var(--chrome-secondary-background-color) !important; }
 /* Hide separators between background tabs */
 .tabbrowser-tab::before,.tabbrowser-tab::after { opacity: 0 !important; }
 /* Remove tab line */
