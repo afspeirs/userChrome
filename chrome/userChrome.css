@@ -4,14 +4,15 @@
 	/* --chrome-secondary-background-color: SteelBlue !important; */
 	/* Hide tab borders */
 	--tabs-border: transparent !important;
+	/* Set tab height */
+	--tab-min-height: 36px !important;
 }
 
 @media all and (min-width: 1500px) {
 	/* One line bar */
-	#TabsToolbar,#nav-bar { height: 34px !important;margin-bottom: 0 !important; }
-	#nav-bar { border-top: none !important; }
-	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px; }
-	#nav-bar { margin-top: -34px !important;margin-right: 65vw !important; }
+	#TabsToolbar,#nav-bar { height: var(--tab-min-height) !important; }
+	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px;margin-bottom: 0 !important; }
+	#nav-bar { margin-top: calc(var(--tab-min-height) * -1) !important;margin-right: 65vw !important;border-top: none !important; }
 	/* Remove colour */
 	/* #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#PersonalToolbar) { background-color: inherit !important; } */
 	/* Move menu to the right */
