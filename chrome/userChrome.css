@@ -6,14 +6,14 @@
 	--tabs-border: transparent !important;
 	/* Set tab height */
 	/* --tab-min-height: 36px !important; */
-	/* Set the height of the nav */
-	--UI-height: 33px;
+	/* Set the height of the nav-bar */
+	--nav-bar-height: 33px;
 }
 
 @media all and (min-width: 1260px) {
 	/* nav and bookmarks */
-	#nav-bar { height: var(--UI-height) !important;margin-right: 50vw; }
-	#PersonalToolbar { border-top: 1px solid transparent;margin-top: calc(var(--UI-height) * -1) !important;margin-left: 50vw; }
+	#nav-bar { height: var(--nav-bar-height) !important;margin-right: 50vw; }
+	#PersonalToolbar { border-top: 1px solid transparent;margin-top: calc(var(--nav-bar-height) * -1) !important;margin-left: 50vw; }
 	/* Fix padding of bookmarks */
 	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),
 	toolbarbutton.bookmark-item:not(.subviewbutton) { padding: 4px !important; }
