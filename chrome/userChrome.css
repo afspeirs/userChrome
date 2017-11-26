@@ -18,7 +18,7 @@
 	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),
 	toolbarbutton.bookmark-item:not(.subviewbutton) { padding: 4px !important; }
 	/* Move menu next to titlebar placeholder */
-	#PanelUI-button { position: fixed;top: 12px;right: 140px;border-inline-start: inherit !important; }
+	/* #PanelUI-button { position: fixed;top: 12px;right: 140px;border-inline-start: inherit !important; } */
 	/* Menu to the left side */
 	#PanelUI-button { -moz-box-ordinal-group: 0 !important;margin-right: -6px !important; }
 	/* Removed panel arrow */
