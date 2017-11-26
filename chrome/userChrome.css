@@ -5,25 +5,25 @@
 	/* Hide tab borders */
 	--tabs-border: transparent !important;
 	/* Set tab height */
-	--tab-min-height: 36px !important;
+	/* --tab-min-height: 36px !important; */
+	/* Set the height of the nav */
+	--UI-height: 33px;
 }
 
-@media all and (min-width: 1500px) {
-	/* One line bar */
-	#TabsToolbar,#nav-bar { height: var(--tab-min-height) !important; }
-	#TabsToolbar { margin-left: 35vw !important;margin-right: 44px;margin-bottom: 0 !important; }
-	#nav-bar { margin-top: calc(var(--tab-min-height) * -1) !important;margin-right: 65vw !important;border-top: none !important; }
-	/* Remove colour */
-	/* #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#PersonalToolbar) { background-color: inherit !important; } */
-	/* Move menu to the right */
-	/* #PanelUI-button { position: fixed;top: 12px;right: 140px;border-inline-start: inherit !important; } */
+@media all and (min-width: 1260px) {
+	/* nav and bookmarks */
+	#nav-bar { height: var(--UI-height) !important;margin-right: 50vw; }
+	#PersonalToolbar { border-top: 1px solid transparent;margin-top: calc(var(--UI-height) * -1) !important;margin-left: 50vw; }
 	/* Fix padding of bookmarks */
-	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),toolbarbutton.bookmark-item:not(.subviewbutton) { padding: 3px !important; }
+	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),
+	toolbarbutton.bookmark-item:not(.subviewbutton) { padding: 4px !important; }
+	/* Move menu next to titlebar placeholder */
+	#PanelUI-button { position: fixed;top: 12px;right: 140px;border-inline-start: inherit !important; }
+	/* Menu to the left side */
+	#PanelUI-button { -moz-box-ordinal-group: 0 !important;margin-right: -6px !important; }
+	/* Removed panel arrow */
+	#customization-panelWrapper .panel-arrow { display: none; }
 }
-
-/*Menu to the left side*/
-#PanelUI-button { -moz-box-ordinal-group: 0 !important;margin-right: -6px !important; }
-#customization-panelWrapper .panel-arrow { display: none; }
 
 /* Hide separators between background tabs */
 .tabbrowser-tab::before,.tabbrowser-tab::after { opacity: 0 !important; }
@@ -57,8 +57,8 @@
 /* #identity-box { max-width: 0 !important; } */
 
 /* Autohide Back/Forward Buttons when there is nothing to go Back/Forward to */
-/* #back-button[disabled="true"] { display: none; } */
-/* #forward-button[disabled="true"] { display: none; } */
+:root:not([customizing]) #back-button[disabled="true"] { display: none; }
+:root:not([customizing]) #forward-button[disabled="true"] { display: none; }
 
 
 /* Colour URL bar */
