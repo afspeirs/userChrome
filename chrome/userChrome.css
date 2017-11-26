@@ -6,13 +6,6 @@
 	--tabs-border: transparent !important;
 }
 
-/* Hide separators between background tabs */
-.tabbrowser-tab::before,.tabbrowser-tab::after { opacity: 0 !important; }
-/* Remove border under navbar */
-#navigator-toolbox::after { border-bottom: 0px !important; }
-/* tab line - adjust color & size */
-.tab-line { height: 0px !important; }
-
 @media all and (min-width: 1200px) {
 	/* One line bar */
 	#TabsToolbar,#nav-bar { height: 36px !important; }
@@ -32,6 +25,12 @@
 
 /* Change the colour of the selected tab to the variable */
 .tab-background[selected="true"] { background: var(--chrome-secondary-background-color) !important; }
+/* Hide separators between background tabs */
+.tabbrowser-tab::before,.tabbrowser-tab::after { opacity: 0 !important; }
+/* Remove tab line */
+.tab-line { height: 0px !important; }
+/* Remove border under navbar */
+#navigator-toolbox::after { border-bottom: 0px !important; }
 
 /* Prevent tab overflow */
 /* .tabbrowser-tab { min-width: 1em !important;clip-width: 1em !important; } */
