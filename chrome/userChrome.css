@@ -1,3 +1,5 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
 /* #navigator-toolbox { */
 :root:not([customizing]) {
 	/* Set background colour */
@@ -29,6 +31,9 @@
 .tabbrowser-tab::before,.tabbrowser-tab::after { opacity: 0 !important; }
 /* Remove tab line */
 .tab-line { height: 0px !important; }
+/* Set tab line colour to windows colour */
+/* .tab-line[selected="true"] { background: -moz-win-accentcolor !important; }
+:root { --tab-loading-fill: -moz-win-accentcolor !important; } */
 /* Remove border under navbar */
 #navigator-toolbox::after { border-bottom: 0px !important; }
 
