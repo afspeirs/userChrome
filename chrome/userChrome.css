@@ -1,95 +1,43 @@
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); */
+
+@import "styles/bookmarks-hide-text.css";
+@import "styles/bookmarks-more-padding.css";
+@import "styles/button-back-hide.css";
+@import "styles/button-forward-hide.css";
+/* @import "styles/button-menu-move-left.css"; */
+/* @import "styles/button-menu-move-tabbar.css"; */
+@import "styles/tab-hide-close-buttons.css";
+@import "styles/tab-hide-seperators.css";
+/* @import "styles/tab-hide-whitespace-after.css"; */
+@import "styles/tab-hide-whitespace-before.css";
+/* @import "styles/tab-line-colour-windows.css"; */
+@import "styles/tab-line-remove.css";
+/* @import "styles/tab-multi-row.css"; */
+/* @import "styles/tab-prevent-overflow.css"; */
+/* @import "styles/top-split-nav-bookmarks.css" (min-width: 1260px); */
+/* @import "styles/url-autohide.css"; */
+@import "styles/url-colour.css";
+
 
 /* #navigator-toolbox { */
 :root:not([customizing]) {
 	/* Set background colour */
 	/* --chrome-secondary-background-color: SteelBlue !important; */
-	/* Hide tab borders */
-	--tabs-border: transparent !important;
+
 	/* Set tab height */
-	/* --tab-min-height: 36px !important; */
+	--tab-min-height: 33px !important;
+
 	/* Set the height of the nav-bar */
 	--nav-bar-height: 33px;
 }
 
-@media all and (min-width: 1260px) {
-	/* nav and bookmarks */
-	#nav-bar { height: var(--nav-bar-height) !important;margin-right: 50vw; }
-	#PersonalToolbar { border-top: 1px solid transparent;margin-top: calc(var(--nav-bar-height) * -1) !important;margin-left: 50vw; }
-	/* Fix padding of bookmarks */
-	#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),
-	toolbarbutton.bookmark-item:not(.subviewbutton) { padding: 4px !important; }
-	/* Move menu next to titlebar placeholder */
-	/* #PanelUI-button { position: fixed;top: 12px;right: 140px;border-inline-start: inherit !important; } */
-	/* Menu to the left side */
-	#PanelUI-button { -moz-box-ordinal-group: 0 !important;margin-right: -6px !important; }
-	/* Removed panel arrow */
-	#customization-panelWrapper .panel-arrow { display: none; }
-}
-
-/* Hide separators between background tabs */
-.tabbrowser-tab::before,.tabbrowser-tab::after { opacity: 0 !important; }
-/* Remove tab line */
-.tab-line { height: 0px !important; }
-/* Set tab line colour to windows colour */
-/* .tab-line[selected="true"] { background: -moz-win-accentcolor !important; }
-:root { --tab-loading-fill: -moz-win-accentcolor !important; } */
-/* Remove border under navbar */
-#navigator-toolbox::after { border-bottom: 0px !important; }
-
-/* Prevent tab overflow */
-/* .tabbrowser-tab { min-width: 1em !important;clip-width: 1em !important; } */
-
-/* Hide close buttons */
-.tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button { display: none !important; }
-/* Show close buttons on hover */
-.tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button { display: -moz-box !important; }
-
-/* Hides bookmark text for all bookmarks displayed in a toolbar */
-.bookmark-item > .toolbarbutton-text { display: none !important; }
-.bookmark-item > .toolbarbutton-icon { margin-inline-end: 0px !important; }
-
-/* Remove unnecassary whitespace before the tabs */
-.titlebar-placeholder[type="pre-tabs"] { border-inline-end: 1px solid black !important;width: 1px !important; }
-.titlebar-placeholder[type="post-tabs"] { display: none !important; }
 
 /* Remove the action button in the URL bar */
 #pageActionButton { display: none !important; }
+
 /* Remove the i button in the URL bar */
 #identity-icon { margin-inline-start: -4px !important; }
 #connection-icon { display: none !important; }
+
 /* Remove the identity box from the URL bar */
 /* #identity-box { max-width: 0 !important; } */
-
-/* Autohide Back/Forward Buttons when there is nothing to go Back/Forward to */
-:root:not([customizing]) #back-button[disabled="true"] { display: none; }
-:root:not([customizing]) #forward-button[disabled="true"] { display: none; }
-
-
-/* Colour URL bar */
-#urlbar { position: relative;z-index: 1; }
-#identity-box:after { content: '';position: absolute;height: 100%;width: 100%;top: 0;left: 0;pointer-events: none;z-index: -1;background: white;opacity: 0.2; }
-/* about:about */
-#urlbar[pageproxystate='valid'] #identity-box.unknownIdentity:after { background: #ff0039; } /* Firefox Red 50 */
-/* about:config */
-#urlbar[pageproxystate='valid'] #identity-box.chromeUI:after { background: #0a84ff; } /* Firefox Blue 50 */
-/* uBlock Origin Dashboard */
-#urlbar[pageproxystate='valid'] #identity-box.extensionPage:after { background: #45a1ff; } /* Firefox Blue 40 */
-/* https://www.github.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity:after{ background: #058b00; } /* Firefox Green 70 */
-/* https://www.google.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.verifiedDomain:after{ background: #12bc00; } /* Firefox Green 60 */
-/* https://mixed-script.badssl.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.mixedActiveBlocked:after { background: #30e60b; } /* Firefox Green 50 */
-/* https://mixed.badssl.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent:after { background: #d7b600; } /* Firefox Yellow 60 */
-/* https://very.badssl.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked:after { background: #d7b600; } /* Firefox Yellow 60 */
-/* https://self-signed.badssl.com/ but add certificate exception */
-#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden:after { background: #ffe900; } /* Firefox Yellow 50 */
-/* Don't know an example for this */
-#urlbar[pageproxystate='valid'] #identity-box.weakCipher:after { background: #a47f00; } /* Firefox Yellow 70 */
-/* https://mixed-script.badssl.com/ but disable protection */
-#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent:after { background: #d70022; } /* Firefox Red 60 */
-/* http://http-login.badssl.com/ */
-#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms:after { background: #a4000f; } /* Firefox Red 70 */

@@ -1,0 +1,8 @@
+/* Move menu next to titlebar placeholder */
+#PanelUI-button {
+  position: fixed;
+  top: 12px;
+  right: 140px;
+  border-inline-start:
+  inherit !important;
+}

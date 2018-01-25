@@ -1,0 +1,4 @@
+/* Remove tab line - The blue line at the top of the tab */
+.tab-line {
+  height: 0px !important;
+}

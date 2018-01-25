@@ -1,0 +1,4 @@
+/* Autohide Forward button when there is nothing to go forward to */
+:root:not([customizing]) #forward-button[disabled="true"] {
+  display: none;
+}

@@ -1,0 +1,8 @@
+/* Hides bookmark text for all bookmarks displayed in a toolbar */
+.bookmark-item > .toolbarbutton-text {
+  display: none !important;
+}
+.bookmark-item > .toolbarbutton-icon {
+  margin-inline-end: 0px !important;
+}
+
