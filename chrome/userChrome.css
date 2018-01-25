@@ -2,10 +2,12 @@
 
 @import "styles/bookmarks-hide-text.css";
 @import "styles/bookmarks-more-padding.css";
-@import "styles/button-back-hide.css";
-@import "styles/button-forward-hide.css";
+@import "styles/bookmarks-show-on-new-tab.css";
+@import "styles/button-back-autohide.css";
+@import "styles/button-forward-autohide.css";
 /* @import "styles/button-menu-move-left.css"; */
 /* @import "styles/button-menu-move-tabbar.css"; */
+/* @import "styles/button-reload-autohide.css"; */
 @import "styles/tab-hide-close-buttons.css";
 @import "styles/tab-hide-seperators.css";
 /* @import "styles/tab-hide-whitespace-after.css"; */
