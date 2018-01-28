@@ -1,10 +1,10 @@
 /* Menu to the left side */
 #PanelUI-button {
-  -moz-box-ordinal-group: 0 !important;
-  margin-right: -6px !important;
+	-moz-box-ordinal-group: 0 !important;
+	margin-right: -6px !important;
 }
 
 /* Removed panel arrow */
 #customization-panelWrapper .panel-arrow {
-  display: none;
+	display: none;
 }

@@ -1,4 +1,4 @@
 /* Autohide Back button when there is nothing to go back to */
 :root:not([customizing]) #back-button[disabled="true"] {
-  display: none;
+	display: none;
 }

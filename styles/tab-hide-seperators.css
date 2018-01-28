@@ -1,5 +1,5 @@
 /* Hide seperators between background tabs */
 .tabbrowser-tab::before,
 .tabbrowser-tab::after {
-  opacity: 0 !important;
+	opacity: 0 !important;
 }

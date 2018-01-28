@@ -1,5 +1,5 @@
 /* Prevent tab overflow */
 .tabbrowser-tab {
-  min-width: 1em !important;
-  clip-width: 1em !important;
+	min-width: 1em !important;
+	clip-width: 1em !important;
 }

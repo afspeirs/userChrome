@@ -1,7 +1,7 @@
 /* Set tab line colour to windows colour */
 :root {
-  --tab-loading-fill: -moz-win-accentcolor !important;
+	--tab-loading-fill: -moz-win-accentcolor !important;
 }
 .tab-line[selected="true"] {
-  background: -moz-win-accentcolor !important;
+	background: -moz-win-accentcolor !important;
 }

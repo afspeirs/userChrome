@@ -1,9 +1,9 @@
 /* Hide close buttons */
 .tabbrowser-tab:not([selected]):not([pinned]) .tab-close-button {
-  display: none !important;
+	display: none !important;
 }
 
 /* Show close buttons on hover */
 .tabbrowser-tab:not([selected]):not([pinned]):hover .tab-close-button {
-  display: -moz-box !important;
+	display: -moz-box !important;
 }
