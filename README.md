@@ -2,8 +2,10 @@
 My userChrome.css settings
 
 ## Setup:
-Create a symbolic link from the Local git folder to the Roaming folder
+1. Clone this repo into the firefox profile chrome folder.
 
 ```bash
-mklink /D "insertPathToRoamingChromeFolder" "InsertPathToGitChromeFolder"
+cd <firefox profile path>
+git clone https://github.com/afspeirs/userChrome.git chrome
 ```
+2. Restart Firefox
