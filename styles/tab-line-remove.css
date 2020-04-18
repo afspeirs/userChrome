@@ -1,4 +1,8 @@
-/* Remove tab line - The blue line at the top of the tab */
+/*
+ * Remove the tab-line on active tabs
+ *
+ * Contributor(s): AFSpeirs
+ */
 .tab-line {
-	height: 0px !important;
+  display: none !important;
 }

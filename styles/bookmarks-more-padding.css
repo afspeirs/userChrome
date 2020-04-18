@@ -1,5 +1,10 @@
-/* Fix padding of bookmarks */
+/*
+ * Changed the padding of the bookmark-items
+ *
+ * Contributor(s): AFSpeirs
+ */
+
 #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar),
 toolbarbutton.bookmark-item:not(.subviewbutton) {
-	padding: 4px !important;
+  padding: 4px 8px !important;
 }

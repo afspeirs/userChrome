@@ -1,5 +1,10 @@
-/* Prevent tab overflow */
+/*
+ * Prevent tab overflow
+ *
+ * Contributor(s): AFSpeirs
+ */
+
 .tabbrowser-tab {
-	min-width: 1em !important;
-	clip-width: 1em !important;
+  min-width: 1em !important;
+  clip-width: 1em !important;
 }

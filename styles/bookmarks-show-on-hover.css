@@ -1,0 +1,20 @@
+/*
+ * Bookmarks toolbar is visible only on new tab page
+ *
+ * Contributor(s): AFSpeirs
+ */
+
+#PersonalToolbar:not(:hover):not(:focus-within):not([customizing]) {
+  visibility: collapse !important;
+}
+#PersonalToolbar {
+  display: block;
+  position: absolute !important;
+  width: 100%;
+  top: 100%;
+  z-index: 1;
+}
+#nav-bar:focus-within + #PersonalToolbar,
+#navigator-toolbox:hover #PersonalToolbar {
+  visibility: visible !important;
+}

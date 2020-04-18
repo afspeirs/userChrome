@@ -1,5 +1,0 @@
-/* Remove whitespace before the tabs */
-.titlebar-placeholder[type="pre-tabs"] {
-	border-inline-end: 1px solid black !important;
-	width: 1px !important;
-}

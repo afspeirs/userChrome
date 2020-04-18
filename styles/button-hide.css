@@ -1,0 +1,19 @@
+/*
+ * Hide various elements From appMenu
+ *
+ * Contributor(s): AFSpeirs
+ */
+
+/* #appMenu-zoom-controls, */
+/* #appMenu-zoom-controls+toolbarseparator, */
+#appMenu-edit-controls,
+#appMenu-edit-controls+toolbarseparator,
+#appMenu-open-file-button,
+#appMenu-save-file-button,
+#appMenu-find-button {
+  display: none !important;
+}
+
+#pageActionButton {
+  display: none !important;
+}

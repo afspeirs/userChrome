@@ -1,0 +1,41 @@
+/*
+ * Put the nav-bar and tabs on one line
+ *
+ * Contributor(s): AFSpeirs
+ */
+
+:root {
+  --tab-min-height: 40px !important;
+}
+
+#navigator-toolbox {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  height: var(--tab-min-height);
+}
+
+#nav-bar {
+  flex-grow: 1;
+  width: 35vw;
+}
+
+#titlebar {
+  flex-grow: 1;
+  width: 65vw;
+  overflow: hidden;
+}
+
+/* Remove empty space before first tab */
+#TabsToolbar .titlebar-spacer[type="pre-tabs"]{
+  display: none !important;
+}
+
+/* Reorder button */
+#nav-bar {
+  display: flex;
+}
+#PanelUI-button {
+  order: -1;
+  border: 0 !important;
+}

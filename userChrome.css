@@ -1,44 +1,15 @@
 @import "styles/bookmarks-hide-text.css";
 @import "styles/bookmarks-more-padding.css";
-@import "styles/bookmarks-show-on-new-tab.css";
+@import "styles/bookmarks-show-on-hover.css";
 /* @import "styles/button-back-autohide.css"; */
+@import "styles/button-hide.css";
 /* @import "styles/button-forward-autohide.css"; */
 /* @import "styles/button-menu-move-left.css"; */
 /* @import "styles/button-menu-move-tabbar.css"; */
 /* @import "styles/button-reload-autohide.css"; */
-@import "styles/tab-hide-close-buttons.css";
-/* @import "styles/tab-hide-seperators.css"; */
-/* @import "styles/tab-hide-whitespace-after.css"; */
-@import "styles/tab-hide-whitespace-before.css";
-/* @import "styles/tab-line-colour-windows.css"; */
 @import "styles/tab-line-remove.css";
 /* @import "styles/tab-multi-row.css"; */
 /* @import "styles/tab-prevent-overflow.css"; */
-@import "styles/top-move-navbar-next-to-tabs.css";
-/* @import "styles/top-split-nav-bookmarks.css" (min-width: 1260px); */
 /* @import "styles/url-autohide.css"; */
-@import "styles/url-colour.css";
-
-
-:root[uidensity=compact] {
-	--tab-min-height: 33px !important;
-	--nav-bar-height: 33px;
-}
-:root:not([uidensity]) {
-	--tab-min-height: 39px !important;
-	--nav-bar-height: 39px;
-}
-:root[uidensity=touch] {
-	--tab-min-height: 41px !important;
-	--nav-bar-height: 41px;
-}
-
-/* Remove the action button in the URL bar */
-#pageActionButton { display: none !important; }
-
-/* Remove the i button in the URL bar */
-#identity-icon { margin-inline-start: -4px !important; }
-#connection-icon { display: none !important; }
-
-/* Remove the identity box from the URL bar */
-/* #identity-box { max-width: 0 !important; } */
+/* @import "styles/url-colour.css"; */
+@import "styles/navigator-toolbox-one-line.css" (min-width: 1700px);
